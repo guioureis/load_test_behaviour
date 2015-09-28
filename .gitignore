@@ -1,0 +1,6 @@
+.vagrant
+target
+.idea*
+*.iml
+*.class
+*.log
