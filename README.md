@@ -79,6 +79,6 @@ Class | Description
  
  `gatling:testOnly *CLASS_NAME*`
  
- ## Test Reports
+## Test Reports
  
  After tests execution you can check a detailed report at `./target/gatling/{TEST_EXECUTION}/index.html`
