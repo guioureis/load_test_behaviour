@@ -45,3 +45,20 @@ Then run the following command inside `sbt` terminal
 
 `gatling:testOnly *ClientTranslator*`
 
+### Authentication tests
+
+The class AuthSiulation has some tests for the authentication endpoint.
+Configure the service and auth section of the `application.conf`file:
+
+Config | Description 
+ -------- | -------- 
+ service.host | the service base URL 
+ service.repeat | in combination with simultaneous_users defines the number of requests
+ service.simultaneous_users | number of sitaneous users for the API requests
+ auth.endpoint | the relative path related to the host to request a token
+ auth.username | -
+ auth.password | -
+
+Then run the following command inside `sbt` terminal
+
+`gatling:testOnly *AuthSiulation*`
