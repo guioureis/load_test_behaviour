@@ -4,3 +4,7 @@ target
 *.iml
 *.class
 *.log
+*.csv
+*.xls
+*.docx
+.DS_Store
