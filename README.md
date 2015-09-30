@@ -45,6 +45,8 @@ Then run the following command inside `sbt` terminal
 
 `gatling:testOnly *ClientTranslator*`
 
+Ps: this test will fail cause any http request were made =/
+
 ### Authentication tests
 
 The class AuthSiulation has some tests for the authentication endpoint.
@@ -61,4 +63,22 @@ Config | Description
 
 Then run the following command inside `sbt` terminal
 
-`gatling:testOnly *AuthSiulation*`
+`gatling:testOnly *AuthSimulation*`
+
+### Consumer Behaviour tests
+
+There are three classes for different types of tests considering this service:
+
+Class | Description 
+ -------- | -------- 
+ BehaviourValidation | has the basic acceptance tests 
+ BehaviourSimulation | grabs a list of CPFs and generates a file with the service response for each
+ BehaviourLoadSimulation | tests with different size of bulk on request
+ 
+ Configure the properties on `application.conf` file, then run the command inside `sbt` terminal replacing `CLASS_NAME` for one of the mentioned above:
+ 
+ `gatling:testOnly *CLASS_NAME*`
+ 
+ ## Test Reports
+ 
+ After tests execution you can check a detailed report at `./target/gatling/{TEST_EXECUTION}/index.html`
